@@ -1,7 +1,7 @@
 {
   "name": "hiito-hello-world",
   "description": "Hello World with EdgeWorkers using TypeScript",
-  "version": "0.3",
+  "version": "0.3.1",
   "property": "hiito-ion-wpa",
   "ewid": 43796,
   "main": "main.js",
