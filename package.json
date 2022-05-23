@@ -1,15 +1,15 @@
 {
-  "name": "hiito-hello-world",
+  "name": "hiito-hello-typescript-world",
   "description": "Hello World with EdgeWorkers using TypeScript",
   "version": "0.3.1",
-  "property": "hiito-ion-wpa",
-  "ewid": 43796,
+  "property": "hiito-ion-wpa_FF",
+  "sandboxproperty": "hiito-ion-wpa-20220523_v1",
+  "ewid": 47184,
   "main": "main.js",
   "edgerc": "~/.edgerc",
   "edgercsection": "ewcc",
   "edgercsectionedgekv": "ewcc-kv",
   "host": "wteam.hiito.work",
-  "path": "/ew/hello-world",
   "license": "MIT",
   "dependencies": {
     "query-string": "^7.0.0",
@@ -19,7 +19,7 @@
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@rollup/plugin-typescript": "^8.2.1",
-    "@types/akamai-edgeworkers": "^1.0.9",
+    "@types/akamai-edgeworkers": "^1.0.10",
     "@types/query-string": "^6.3.0",
     "@types/url-parse": "^1.4.3",
     "npe": "^1.1.4",
@@ -51,10 +51,10 @@
     "property-search": "akamai property-manager search $npm_package_property",
     "new-sandbox-p": "akamai sandbox create --property $npm_package_property --name $npm_package_property --section $npm_package_edgercsection && akamai sandbox add-edgeworker $npm_package_ewid ./dist/bundle.tgz --section $npm_package_edgercsection ",
     "new-sandbox": "akamai sandbox create --hostname $npm_package_property --name $npm_package_property --section $npm_package_edgercsection && akamai sandbox add-edgeworker $npm_package_ewid ./dist/bundle.tgz --section $npm_package_edgercsection ",
-    "start-sandbox": "akamai sandbox start --section $npm_package_edgercsection",
-    "token": "export token=`akamai edgeworkers create-auth-token --format curl --expiry 60 $npm_package_property  --section $npm_package_edgercsection| cut -d \" \" -f 2` && npe token $token",
+    "start-sandbox": "akamai sandbox start --edgerc $npm_package_edgerc --section $npm_package_edgercsection",
+    "token": "export token=`akamai edgeworkers create-auth-token --format curl --expiry 60 $npm_package_host  --section $npm_package_edgercsection| cut -d \" \" -f 3` && npe token $token",
     "sandbox-test": "wrap () { export url=\"$*\"; http 127.0.0.1:9550/$npm_package_path host:$npm_package_host Pragma:\"akamai-x-get-cache-key, akamai-x-cache-on, akamai-x-cache-remote-on, akamai-x-get-true-cache-key, akamai-x-check-cacheable, akamai-x-get-request-id, akamai-x-serial-no, akamai-x-get-ssl-client-session-id, X-Akamai-CacheTrack, akamai-x-get-client-ip, akamai-x-feo-trace, akamai-x-tapioca-trace, akamai-x-ew-debug\" Akamai-EW-Trace:$npm_package_token; }; wrap",
-    "test": "wrap () { export url=\"$*\"; http $url host:$npm_package_property Pragma:\"akamai-x-get-cache-key, akamai-x-cache-on, akamai-x-cache-remote-on, akamai-x-get-true-cache-key, akamai-x-check-cacheable, akamai-x-get-request-id, akamai-x-serial-no, akamai-x-get-ssl-client-session-id, X-Akamai-CacheTrack, akamai-x-get-client-ip, akamai-x-feo-trace, akamai-x-tapioca-trace, akamai-x-ew-debug\" Akamai-EW-Trace:$npm_package_token; }; wrap"
+    "test": "wrap () { export url=\"$*\"; http $url host:$npm_package_host Pragma:\"akamai-x-get-cache-key, akamai-x-cache-on, akamai-x-cache-remote-on, akamai-x-get-true-cache-key, akamai-x-check-cacheable, akamai-x-get-request-id, akamai-x-serial-no, akamai-x-get-ssl-client-session-id, X-Akamai-CacheTrack, akamai-x-get-client-ip, akamai-x-feo-trace, akamai-x-tapioca-trace, akamai-x-ew-debug\" Akamai-EW-Trace:$npm_package_token; }; wrap"
   },
-  "token": "Creating"
+  "token": "st=1653281195~exp=1653284795~acl=/*~hmac=7c1f8a23b7e91229f55cfd908fb8f43fefe3514ea88829f471049842be02af25'"
 }

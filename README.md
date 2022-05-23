@@ -34,7 +34,7 @@ this will update ewid in package.json
 
 ## 3, create & start sandbox
 ~~~
- yarn new-sandbox
+ yarn new-sandbox-p
  yarn start-sandbox
 ~~~
 
@@ -56,7 +56,7 @@ and upload it to sandbox.
 ~~~
 
 
-## 7, test your edgeworker code
+## 7, test your edgeworker code on Sandbox
 ~~~
   yarn test http://localhost:9550/path/
 ~~~
@@ -68,6 +68,13 @@ if code is not working, go back to #4.
   yarn deploy
 ~~~
 
+The above commmand will run the following:
+~~~
+  yarn build
+  yarn upload
+  yarn staging
+  yarn production
+~~~
 
 ## 9, test it on staging or production
 ~~~
