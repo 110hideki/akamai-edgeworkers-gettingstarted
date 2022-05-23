@@ -8,7 +8,7 @@ brew install akamai
 akamai install edgeworkers
 ```
 + get your .edgerc saved on your home directory
-+ add the section mae of .edgerc in edgercsection in package.json
++ add the section name of .edgerc in edgercsection in package.json
 + downlaod typescript-rollup project to your working directory
 
 
@@ -80,6 +80,6 @@ The above commmand will run the following:
 
 ## 9, test it on staging or production
 ~~~
-  yarn test https://yourdomain.com/edgeworker/path
+  yarn test https://yourdomain.com/edgeworker_path
 ~~~
 
