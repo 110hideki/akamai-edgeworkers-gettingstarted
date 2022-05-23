@@ -19,11 +19,12 @@ you need to know your edgeworker name and property host name.
 ~~~
  yarn start
 
- ### (1/5) Install packages
- ### (2/5) Your EdgeWorker code name? : 
- ### (3/5) Description? : 
- ### (4/5) Set initial script version (default:0.0.1) : 
- ### (5/5) Property name associated with this ew code  : 
+ ### (1/6) Install packages
+ ### (2/6) Your EdgeWorker code name? : 
+ ### (3/6) Description? : 
+ ### (4/6) Set initial script version (default:0.0.1) : 
+ ### (5/6) Property name associated with this ew code  : 
+ ### (6/6) Host name associated with this ew code  : 
 ~~~
 
 if you already have edgeworker id on portal
