@@ -8,7 +8,7 @@ brew install akamai
 akamai install edgeworkers
 ```
 + get your .edgerc saved on your home directory
-
++ add the section mae of .edgerc in edgercsection in package.json
 + downlaod typescript-rollup project to your working directory
 
 
@@ -33,6 +33,8 @@ if you already have edgeworker id on portal
 this will update ewid in package.json
 
 ## 3, create & start sandbox
+change sandboxproperty in the package.json file. you can specify the Sandbox name.
+
 ~~~
  yarn new-sandbox-p
  yarn start-sandbox

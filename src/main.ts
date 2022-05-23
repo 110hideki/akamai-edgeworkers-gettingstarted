@@ -1,4 +1,3 @@
-/// <reference types="akamai-edgeworkers"/>
 /*
 (c) Copyright 2020 Akamai Technologies, Inc. Licensed under Apache 2 license.
 
@@ -8,6 +7,7 @@ Repo: https://github.com/akamai/edgeworkers-examples/tree/master/hello-world
 */
 
 // Import logging module
+/// <reference types="akamai-edgeworkers"/>
 import { logger } from 'log'
 
 export function onClientRequest(request: EW.IngressClientRequest) {
@@ -18,7 +18,7 @@ export function onClientRequest(request: EW.IngressClientRequest) {
         '<html><body><h1>Hello World From Akamai EdgeWorkers</h1></body></html>')
 }
 
-export function onClientResponse(request: EW.IngressClientRequest, response: EW.Response) {
+export function onClientResponse(request: EW.EgressClientRequest, response: EW.EgressClientResponse) {
     // Outputs a message to the X-Akamai-EdgeWorker-onClientResponse-Log header.
     logger.log("Adding a header in ClientResponse")
 
